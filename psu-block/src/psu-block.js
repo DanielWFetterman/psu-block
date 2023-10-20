@@ -5,7 +5,12 @@ const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 class PsuBlock extends LitElement {
   static properties = {
     header: { type: String },
-    boxText: {type: String },
+    boxText1: { type: String },
+    boxText2: { type: String },
+    boxText3: { type: String },
+    stateOne: { type: Boolean, reflect: true},
+    stateTwo: { type: Boolean, reflect: true},
+
 
   }
 
@@ -18,13 +23,22 @@ class PsuBlock extends LitElement {
 
     }
 
-    .block {
+    :host([stateOne]) .blockOne {
       padding: 8px;
-      border: 2px solid #444;
       width: 403.531px ;
       height: 342.250px; 
       background-color: #1e407c;
-      color: white;
+      color: #fff;
+      font-size: 32px;
+      text-align: center;
+    }
+    
+    :host([stateTwo]) .blockTwo {
+      padding: 8px;
+      width: 403.531px ;
+      height: 342.250px; 
+      background-color: #fff;
+      color: #000;
       font-size: 32px;
     }
 
@@ -35,15 +49,23 @@ class PsuBlock extends LitElement {
   constructor() {
     super();
     this.header = 'My app';
-    this.boxText = this.boxText || "default";
+    this.boxText1 = this.boxText1 || "default";
+    this.boxText2 = this.boxText2 || "default";
+    this.boxText3 = this.boxText3 || "default";
   }
 
   render() {
     return html`
 
-    <div class="block" >
-      <h3> ${this.boxText} </h3>
+    <div class="blockOne" >
+      <h3> ${this.boxText1} </h3>
     </div> 
+
+    <div class="blockTwo" >
+      <h3> ${this.boxText2} </h3>
+      <b></b>
+      <p> ${this.boxText3} </p>
+    </div>
       
     `;
   }
