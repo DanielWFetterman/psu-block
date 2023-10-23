@@ -11,18 +11,17 @@ class PsuBlock extends LitElement {
     stateOne: { type: Boolean, reflect: true},
     stateTwo: { type: Boolean, reflect: true},
 
-
   }
 
   static get styles () {
     return css`
-    
+
     :host {
       display: inline-block;
-      
+  
+      }
 
-    }
-
+    // When you just want a background with text use stateOne
     :host([stateOne]) .blockOne {
       padding: 8px;
       width: 403.531px ;
@@ -33,7 +32,8 @@ class PsuBlock extends LitElement {
       text-align: center;
     }
     
-    :host([stateTwo]) .blockTwo {
+    // When you want a block with a white background and some text use stateTwo
+    :host([stateTwo]).blockTwo {
       padding: 8px;
       width: 403.531px ;
       height: 342.250px; 
@@ -56,6 +56,7 @@ class PsuBlock extends LitElement {
 
   render() {
     return html`
+    <!-- HTML goes here -->
 
     <div class="blockOne" >
       <h3> ${this.boxText1} </h3>
