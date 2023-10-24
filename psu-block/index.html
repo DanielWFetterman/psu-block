@@ -9,19 +9,37 @@
 
   <style>
     html,
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #ededed;
+
+    :host {
+      display: block;
+      background-color: #EEF3F7;
     }
+
+    .container {
+      display: grid; 
+      grid-gap: 300px;
+      grid-template-columns: repeat(3,125px);
+      grid-template-rows: repeat(3, 50px);
+
+    }
+
   </style>
   <title>psu-block</title>
 </head>
 
 <body>
-  <psu-block boxText1="8,000+ Penn State scholarships" boxText2=" " boxText3=" " stateOne></psu-block>
-  <psu-block boxText1=" " boxText2="58%" boxText3="Of students are Pennsylvania residents" stateTwo></psu-block>
+  <div class="container">
+    <psu-block boxText1="8,000+ students" stateOne> </psu-block>
+    <psu-block boxText1="58%" boxText2="Of students are Pennsylvania residents" stateTwo multiFields> </psu-block>
+    <psu-block boxText1="Students from 50 states and 145 countries" stateThree> </psu-block>
+    <psu-block boxText1="Check out Undergraduate Admissions statisitics" stateFour> </psu-block>
+    <psu-block boxText1="Nearly 10,000 international students" stateOne> </psu-block>
+    <psu-block boxText1="39%" boxText2="Of students are from diverse backgrounds." stateTwo multiFields> </psu-block>
+    <psu-block boxText1="7,900+ faculty across all campuses" stateFive> </psu-block>
+    <psu-block boxText1="759,000+ alumni" stateFive> </psu-block>
+    <psu-block boxText1="See Penn State's Data Digest dashboards" stateFour> </psu-block>
+
+  </div>
 
   <script type="module" src="./src/psu-block.js"></script>
 </body>
