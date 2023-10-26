@@ -17,10 +17,11 @@
 
     .container {
       display: grid; 
-      grid-gap: 300px;
-      grid-template-columns: repeat(3,125px);
-      grid-template-rows: repeat(3, 50px);
-
+      column-gap: 270px;
+      row-gap: 270px;
+      grid-template-columns: repeat(3,120px);
+      grid-template-rows: repeat(3, 65px);
+      
     }
 
   </style>
@@ -29,15 +30,15 @@
 
 <body>
   <div class="container">
-    <psu-block boxText1="8,000+ students" stateOne> </psu-block>
-    <psu-block boxText1="58%" boxText2="Of students are Pennsylvania residents" stateTwo multiFields> </psu-block>
-    <psu-block boxText1="Students from 50 states and 145 countries" stateThree> </psu-block>
-    <psu-block boxText1="Check out Undergraduate Admissions statisitics" stateFour> </psu-block>
-    <psu-block boxText1="Nearly 10,000 international students" stateOne> </psu-block>
-    <psu-block boxText1="39%" boxText2="Of students are from diverse backgrounds." stateTwo multiFields> </psu-block>
-    <psu-block boxText1="7,900+ faculty across all campuses" stateFive> </psu-block>
-    <psu-block boxText1="759,000+ alumni" stateFive> </psu-block>
-    <psu-block boxText1="See Penn State's Data Digest dashboards" stateFour> </psu-block>
+    <psu-block stateOne boxText1="8,000+ students"> </psu-block>
+    <psu-block stateTwo multiFields boxText1="58%" boxText2="Of students are Pennsylvania residents"> </psu-block>
+    <psu-block stateThree boxText1="Students from 50 states and 145 countries"> </psu-block>
+    <psu-block stateFour boxText1="Check out Undergraduate Admissions statisitics" linkImg linkURLImg="https://www.psu.edu/psu-edu-assets/images/power-facts/penn-state-tuition.jpg" linkStr linkURLStr="https://admissions.psu.edu/apply/statistics/"> </psu-block>
+    <psu-block stateOne boxText1="Nearly 10,000 international students"> </psu-block>
+    <psu-block stateTwo multiFields boxText1="39%" boxText2="Of students are from diverse backgrounds."> </psu-block>
+    <psu-block stateFive boxText1="7,900+ faculty across all campuses"> </psu-block>
+    <psu-block stateFive boxText1="759,000+ alumni"> </psu-block>
+    <psu-block stateFour boxText1="See Penn State's Data Digest dashboards" linkImg linkURLImg="https://www.psu.edu/psu-edu-assets/images/power-facts/data-digest.jpg" linkStr linkURLStr="https://datadigest.psu.edu/"> </psu-block>
 
   </div>
 
