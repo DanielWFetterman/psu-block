@@ -24,6 +24,41 @@
       
     }
 
+/*
+    @media (min-width: 1080px) {
+      .container { 
+        max-width: 900px;
+        display: grid; 
+        column-gap: 270px;
+        row-gap: 270px;
+        grid-template-columns: repeat(3,300px);
+        grid-template-rows: repeat(3, 65px);
+      }
+    } 
+
+  */ 
+   /* @media (min-width: 768px) { 
+      .container {
+        display: grid; 
+        column-gap: 270px;
+        row-gap: 270px;
+        grid-template-columns: repeat(2,120px);
+        grid-template-rows: repeat(2, 65px);
+      }
+    }
+
+    @media screen and (min-width: 500px) {
+      .container {
+        display: grid; 
+        column-gap: 270px;
+        row-gap: 300px;
+        grid-template-columns: repeat(1,120px);
+        grid-template-rows: repeat(1, 65px);
+      } 
+    }
+    */
+
+
   </style>
   <title>psu-block</title>
 </head>
@@ -33,13 +68,12 @@
     <psu-block stateOne boxText1="8,000+ students"> </psu-block>
     <psu-block stateTwo multiFields boxText1="58%" boxText2="Of students are Pennsylvania residents"> </psu-block>
     <psu-block stateThree boxText1="Students from 50 states and 145 countries"> </psu-block>
-    <psu-block stateFour boxText1="Check out Undergraduate Admissions statisitics" linkImg linkURLImg="https://www.psu.edu/psu-edu-assets/images/power-facts/penn-state-tuition.jpg" linkStr linkURLStr="https://admissions.psu.edu/apply/statistics/"> </psu-block>
+    <psu-block stateFour boxText1="Check out Undergraduate Admissions statisitics" linkURLImg="https://www.psu.edu/psu-edu-assets/images/power-facts/penn-state-tuition.jpg" linkURLStr="https://admissions.psu.edu/apply/statistics/"> </psu-block>
     <psu-block stateOne boxText1="Nearly 10,000 international students"> </psu-block>
     <psu-block stateTwo multiFields boxText1="39%" boxText2="Of students are from diverse backgrounds."> </psu-block>
     <psu-block stateFive boxText1="7,900+ faculty across all campuses"> </psu-block>
     <psu-block stateFive boxText1="759,000+ alumni"> </psu-block>
-    <psu-block stateFour boxText1="See Penn State's Data Digest dashboards" linkImg linkURLImg="https://www.psu.edu/psu-edu-assets/images/power-facts/data-digest.jpg" linkStr linkURLStr="https://datadigest.psu.edu/"> </psu-block>
-
+    <psu-block stateFour boxText1="See Penn State's Data Digest dashboards" linkURLImg="https://www.psu.edu/psu-edu-assets/images/power-facts/data-digest.jpg" linkURLStr="https://datadigest.psu.edu/"> </psu-block>
   </div>
 
   <script type="module" src="./src/psu-block.js"></script>
