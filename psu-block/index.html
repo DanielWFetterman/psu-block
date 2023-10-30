@@ -15,48 +15,37 @@
       background-color: #EEF3F7;
     }
 
-    .container {
-      display: grid; 
-      column-gap: 270px;
-      row-gap: 270px;
-      grid-template-columns: repeat(3,120px);
-      grid-template-rows: repeat(3, 65px);
-      
-    }
-
-/*
     @media (min-width: 1080px) {
       .container { 
         max-width: 900px;
         display: grid; 
-        column-gap: 270px;
+        column-gap: 85px;
         row-gap: 270px;
         grid-template-columns: repeat(3,300px);
         grid-template-rows: repeat(3, 65px);
       }
     } 
 
-  */ 
-   /* @media (min-width: 768px) { 
+    @media (min-width: 768px ) and (max-width: 1080px) { 
       .container {
         display: grid; 
-        column-gap: 270px;
-        row-gap: 270px;
-        grid-template-columns: repeat(2,120px);
-        grid-template-rows: repeat(2, 65px);
+        max-width: 600px;
+        column-gap: 85px;
+        row-gap: 35px;
+        grid-template-columns: repeat(2,300px);
+        grid-template-rows: repeat(2, 300px);
       }
     }
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 0px) and (max-width: 768px) {
       .container {
-        display: grid; 
-        column-gap: 270px;
-        row-gap: 300px;
-        grid-template-columns: repeat(1,120px);
-        grid-template-rows: repeat(1, 65px);
+        display: grid;
+        max-width: 300px;
+        row-gap: 35px;
+        grid-template-columns: repeat(1,300px);
+        grid-template-rows: repeat(9, 300px);
       } 
     }
-    */
 
 
   </style>
