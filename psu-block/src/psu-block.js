@@ -5,18 +5,18 @@ const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 class PsuBlock extends LitElement {
   static properties = {
     header: { type: String },
-    boxText1: { type: String },
-    boxText2: { type: String },
-    linkURLImg: { type: String },
-    linkURLStr: { type: String },
+    boxtext1: { type: String },
+    boxtext2: { type: String },
+    linkurlimg: { type: String },
+    linkurlstr: { type: String },
 
-    stateOne: { type: Boolean, reflect: true},
-    stateTwo: { type: Boolean, reflect: true},
-    stateThree: { type: Boolean, reflect: true},
-    stateFour: { type: Boolean, reflect: true},
-    stateFive: { type: Boolean, reflect: true},
+    stateone: { type: Boolean, reflect: true},
+    statetwo: { type: Boolean, reflect: true},
+    statethree: { type: Boolean, reflect: true},
+    statefour: { type: Boolean, reflect: true},
+    statefive: { type: Boolean, reflect: true},
 
-    multiFields:{ type: Boolean, reflect: true }, 
+    multifields:{ type: Boolean, reflect: true }, 
 
   }
 
@@ -31,27 +31,26 @@ class PsuBlock extends LitElement {
       --darkgrey: #00032180;
       --blockwidth: 369.719px ;
       --blockheight: 315.750px;
-      --fontsize: 32px;
+      --fontsize32: 32px;
+      --fontsize24: 24px;
       --fontweight: 700;
       --fontfam: "Roboto", sans-serif;
-
-      --link: linkURLImg;
   
     }
 
-    /** When you just want a background with text use stateOne */
-    :host([stateOne]) .block {
+    /** When you just want a background with text use stateone */
+    :host([stateone]) .block {
       font-family: var(--fontfam);
       width: var(--blockwidth);
       height: var(--blockheight);
       background-color: var(--beaverblue);
       color: var(--whiteout);
-      font-size: var(--fontsize);
+      font-size: var(--fontsize32);
       font-weight: var(--fontweight);
       text-align: left;
     }
 
-    :host([stateOne]) .block .content{
+    :host([stateone]) .block .content{
       padding-top: 15%;
       padding-bottom: 15%;
       padding-left: 10%;
@@ -59,31 +58,31 @@ class PsuBlock extends LitElement {
     }
 
 
-      /** When you want a block with a whiteout background and some text use StateTwo*/
-    :host([stateTwo]) .block {
+      /** When you want a block with a whiteout background and some text use statetwo*/
+    :host([statetwo]) .block {
       font-family: var(--fontfam);
       width: var(--blockwidth);
       height: var(--blockheight);
       background-color: var(--whiteout);
-      color: var(--beaverblue);
-      font-size: var(--fontsize);
+      color: var(--nittanynavy);
+      font-size: var(--fontsize32);
       text-align: left;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
-    :host([stateTwo]) .block b {
+    :host([statetwo]) .block b {
       background-color: var(--beaverblue);
       height: 3px;
       font-weight: var(--fontweight);
       display: block;
     }
     
-    :host([stateTwo]) .block p{
-      font-size: 24px;
+    :host([statetwo]) .block p{
+      font-size: var(--fontsize24);
       font-weight: 400px;
     }
 
-    :host([stateTwo]) .block .content {
+    :host([statetwo]) .block .content {
       padding-top: 1%;
       padding-bottom: 5%;
       padding-left: 10%;
@@ -92,18 +91,18 @@ class PsuBlock extends LitElement {
 
 
       /** State three for whiteout text and a gradient background */
-    :host([stateThree]) .block {
+    :host([statethree]) .block {
       font-family: var(--fontfam);
       width: var(--blockwidth);
       height: var(--blockheight);
       color: var(--whiteout);
-      font-size: var(--fontsize);
+      font-size: var(--fontsize32);
       font-weight: var(--fontweight);
       text-align: left;
       background: linear-gradient(180deg, var(--beaverblue) 0%, var(--nittanynavy) 65%, var(--nittanynavy) 100%);
       }
 
-    :host([stateThree]) .block .content {
+    :host([statethree]) .block .content {
       padding-top: 15%;
       padding-bottom: 15%;
       padding-left: 10%;
@@ -113,12 +112,12 @@ class PsuBlock extends LitElement {
 
 
       /** Block Four with a picture and a link */
-    :host([stateFour]) .block {
+    :host([statefour]) .block {
       font-family: var(--fontfam);
       width: var(--blockwidth);
       height: var(--blockheight);
       color: var(--whiteout);
-      font-size: var(--fontsize);
+      font-size: var(--fontsize32);
       font-weight: var(--fontweight);
       text-align: left;
       background-size: cover;
@@ -128,19 +127,19 @@ class PsuBlock extends LitElement {
       background-color: var(--darkgrey);
     } 
 
-    :host([stateFour]) .block .content{
+    :host([statefour]) .block .content{
       padding-top: 10%;
       padding-bottom: 15%;
       padding-left: 10%;
       padding-right: 10%;
     } 
 
-    :host([stateFour]) .block .content .card-link {
+    :host([statefour]) .block .content .card-link {
       text-decoration-line: none;
       color: var(--whiteout);
     }
 
-    :host([stateFour]) .block .content svg{
+    :host([statefour]) .block .content svg{
       padding-top: 0;
       padding-bottom: 25px;
       padding-left: 295px;
@@ -149,25 +148,24 @@ class PsuBlock extends LitElement {
 
 /*
      :hover, :focus,
-     :host([stateFour]) .block .content svg mask g {
+     :host([statefour]) .block .content div a .linkicon {
       width: 32px;
       height: 32px;
      }
-*/
+*/ 
 
-
-    :host([stateFive]) .block {
+    :host([statefive]) .block {
       font-family: var(--fontfam);
       width: var(--blockwidth);
       height: var(--blockheight);
       background-color: var(--nittanynavy);
       color: var(--whiteout);
-      font-size: var(--fontsize);
+      font-size: var(--fontsize32);
       font-weight: var(--fontweight);
       text-align: left;
     }
 
-    :host([stateFive]) .block .content {
+    :host([statefive]) .block .content {
       padding-top: 15%;
       padding-bottom: 15%;
       padding-left: 10%;
@@ -181,26 +179,26 @@ class PsuBlock extends LitElement {
   constructor() {
     super();
     this.header = 'PSU Blocks';
-    this.boxText1 = this.boxText1 || "default";
-    this.boxText2 = this.boxText2 || "default";
+    this.boxtext1 = this.boxtext1 || "default";
+    this.boxtext2 = this.boxtext2 || "default";
     this.boxText3 = this.boxText3 || "default";
 
-    this.linkURLImg = this.linkURLImg || "";
-    this.linkURLStr = this.linkURLStr || "";
+    this.linkurlimg = this.linkurlimg || "";
+    this.linkurlstr = this.linkurlstr || "";
   }
 
   render() {
     return html`
     <!-- HTML goes here -->
-    ${this.linkURLImg ? html`<div class="block" style='background-image: url("${this.linkURLImg}");'>  
+    ${this.linkurlimg ? html`<div class="block" style='background-image: url("${this.linkurlimg}");'>  
       <div class="content">
-        <a class="card-link" href=${this.linkURLStr} target="${this.linkURLStr}">
-          <h3> ${this.boxText1} </h3>
+        <a class="card-link" href=${this.linkurlstr} target="${this.linkurlstr}">
+          <h3> ${this.boxtext1} </h3>
         </a>
-        <p> ${this.multiFields ? html`<b></b> <p> ${this.boxText2} </p>` : html` `}</p>
-        <div> ${this.linkURLStr ? html` 
-          <a href=${this.linkURLStr}> 
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+        <p> ${this.multifields ? html`<b></b> <p> ${this.boxtext2} </p>` : html` `}</p>
+        <div> ${this.linkurlstr ? html` 
+          <a href=${this.linkurlstr} target="${this.linkurlstr}"> 
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="linkicon"> 
               <mask id="mask0_173_1032" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                 <rect width="24" height="24" fill="#D9D9D9"></rect>
               </mask>
@@ -226,10 +224,10 @@ class PsuBlock extends LitElement {
         </div>     
       </div>` : html`<div class="block"> 
       <div class="content">
-        <h3> ${this.boxText1} </h3>
-        <p> ${this.multiFields ? html`<b></b> <p> ${this.boxText2} </p>` : html` `}</p>
-        <div> ${this.linkURLStr ? html` 
-          <a href=${this.linkURLStr}> 
+        <h3> ${this.boxtext1} </h3>
+        <p> ${this.multifields ? html`<b></b> <p> ${this.boxtext2} </p>` : html` `}</p>
+        <div> ${this.linkurlstr ? html` 
+          <a href=${this.linkurlstr} target="${this.linkurlstr}"> 
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> 
             <mask id="mask0_173_1032" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
               <rect width="24" height="24" fill="#D9D9D9"></rect>
